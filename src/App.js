@@ -1,27 +1,14 @@
 import React from 'react';
+import Hello from './Hello';
 
 function App() {
   return (
     <div className="App">
 			<h1>TODO</h1>
-			<Hello/>
-
+			<Hello mytext="I am Component!!"/>
     </div>
   );
 }
-// const App = () =><div>Hello word <Hello/></div>
 
-// class App extends React.Component{
-// 	render(){
-// 		return(
-// 			<div>holaa desde la clase <Hello/></div>
-// 		)
-// 	}
-// }
-function Hello(){
-	return(
-		<h2>SALUDO2</h2>
-	)
-}
 
 export default App;
