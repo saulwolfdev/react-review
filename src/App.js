@@ -11,7 +11,7 @@ class App extends Component {
 	 render() { 
     return ( 
       <div>
-		  <Tasks todo={this.state.tasks}/>
+		  <Tasks taskFather={this.state.tasks}/>
 	  </div>
      );
   }

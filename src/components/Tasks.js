@@ -1,20 +1,17 @@
 import React, { Component } from 'react'
+import Task from './Task';
 class Tasks extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {  };
+		this.state = {};
 	}
 	render() {
 		return (
 			<div>
-				<h1>tasks Json</h1>
+				<h1>TASK FATHER</h1>
 				<ul>
-			  	{this.props.todo.map(task=><li key={task.id}>
-				   <p>{task.title}</p>
-					<p>{task.description}</p>
-					<p>{task.done}</p>
-			  </li>)}
-		  </ul>
+					{this.props.taskFather.map(task => <Task taskChildren={task} />)}
+				</ul>
 			</div>
 		)
 	}
