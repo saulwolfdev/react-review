@@ -1,14 +1,20 @@
-import React from 'react';
-import Hello from './Hello';
-
-function App() {
-  return (
-    <div className="App">
-			<h1>TODO</h1>
-			<Hello mytext="I am Component!!"/>
-    </div>
-  );
+import React, { Component } from 'react';
+import tasks from "./sample/tasks.json";
+import Tasks from './components/Tasks.js';
+class App extends Component {
+		constructor(props) {
+		super(props)
+			this.state={
+		tasks:tasks
+	}
+	}
+	 render() { 
+    return ( 
+      <div>
+		  <Tasks todo={this.state.tasks}/>
+	  </div>
+     );
+  }
 }
-
-
+ 
 export default App;
