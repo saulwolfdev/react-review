@@ -10,7 +10,7 @@ class Tasks extends Component {
 			<div>
 				<h1>TASK FATHER</h1>
 				<ul>
-					{this.props.taskFather.map(task => <Task taskChildren={task} />)}
+					{this.props.taskFather.map(task => <Task taskChildren={task} key={task.id}/>)}
 				</ul>
 			</div>
 		)

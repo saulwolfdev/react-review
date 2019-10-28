@@ -9,13 +9,13 @@
 	"id":1,
 	"title":"name 1",
 	"description":"description 1 ",
-	"done":false
+	"done":true
 },
 	{
 	"id":2,
 	"title":"name 2",
 	"description":"description 2",
-	"done":false
+	"done":true
 },
 	{
 	"id":3,
