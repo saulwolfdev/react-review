@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Task from './Task';
+import PropTypes from "prop-types";
 class Tasks extends Component {
 	constructor(props) {
 		super(props);
@@ -9,12 +10,12 @@ class Tasks extends Component {
 		return (
 			<div>
 				<h1>TASK FATHER</h1>
-				<ul>
-					{this.props.taskFather.map(task => <Task taskChildren={task} key={task.id}/>)}
-				</ul>
+					{this.props.taskGrandFather.map(task => <Task taskChildren={task} key={task.id}/>)}
 			</div>
 		)
 	}
 }
-
+Tasks.propTypes={
+	taskGrandFather:PropTypes.array.isRequired
+}
 export default Tasks;

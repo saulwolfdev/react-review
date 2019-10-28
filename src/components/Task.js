@@ -1,22 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from "prop-types";
 
-const button={
-	fontSize:"15px",
-	borderRadius: "50%",
-	backgroundColor: "#cecece",
-	outline: "none",
-    cursor: "pointer",
-	marginLeft: "5px",
-    padding: "12px",
-    border: "none"
-	
-}
-const list={
-	display:" flex",
-    justifyContent: "center",
-    alignItems: "center",
-    alignContent: "center"
-}
 class Task extends Component {
 	constructor(props) {
 		super(props);
@@ -28,22 +12,22 @@ class Task extends Component {
 			fontWeight: '400',
 			color:this.props.taskChildren.done?"red":"green",
 			backgroundColor: "#00ffff",
-			textDecoration:"none"
+			textDecoration:this.props.taskChildren.done?"line-through":"none"
 		}
 	}
 	render() {
 		const {taskChildren}=this.props;
 		return (
-			<div style={this.stylesCompleted()}>
+			<div>
 			{/* DESTRUCTURING */}
-			  <h1>TASK CHILDREN</h1>
-				<li style={list} key={taskChildren.id}>
-				    <p>{taskChildren.title}</p>
-					<p>{taskChildren.description}</p>
-					<p>{taskChildren.done}</p>
+			  <h1>TASKChildren CHILDREN</h1>
+				<p  key={taskChildren.id} style={this.stylesCompleted()}>
+				    {taskChildren.title} -
+					{taskChildren.description} - 
+					{taskChildren.done} -
 					<input type="checkbox"/>
 					<button style={button}>x</button>
-			  </li>
+			  </p>
 			{/* //OTRA FORMA
 			// 	<li key={this.props.taskChildren.id}>
 			// 	    <p>{this.props.taskChildren.title}</p>
@@ -56,5 +40,19 @@ class Task extends Component {
 		);
 	}
 }
-
+Task.propTypes={
+	taskChildren:PropTypes.object.isRequired
+	
+}
+const button={
+	fontSize:"15px",
+	borderRadius: "50%",
+	backgroundColor: "#cecece",
+	outline: "none",
+    cursor: "pointer",
+	marginLeft: "5px",
+    padding: "12px",
+    border: "none"
+	
+}
 export default Task;

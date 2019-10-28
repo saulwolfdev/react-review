@@ -5,14 +5,14 @@ class App extends Component {
 		constructor(props) {
 		super(props)
 			this.state={
-		tasks:tasks
+		tasksGrandFather:tasks
 	}
 	}
 	 render() { 
     return ( 
       <div>
 		  <h1>TASK GRANDFATHER</h1>
-		  <Tasks taskFather={this.state.tasks}/>
+		  <Tasks taskGrandFather={this.state.tasksGrandFather}/>
 	  </div>
      );
   }
