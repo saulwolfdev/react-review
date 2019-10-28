@@ -10,29 +10,30 @@ class Task extends Component {
 		return{
 			fontSize:"20px",
 			fontWeight: '400',
-			color:this.props.taskChildren.done?"red":"green",
+			color:this.props.task.done?"red":"green",
 			backgroundColor: "#00ffff",
-			textDecoration:this.props.taskChildren.done?"line-through":"none"
+			textDecoration:this.props.task.done?"line-through":"none"
 		}
 	}
 	render() {
-		const {taskChildren}=this.props;
+		const {task}=this.props;
 		return (
 			<div>
 			{/* DESTRUCTURING */}
-			  <h1>TASKChildren CHILDREN</h1>
-				<p  key={taskChildren.id} style={this.stylesCompleted()}>
-				    {taskChildren.title} -
-					{taskChildren.description} - 
-					{taskChildren.done} -
+			  <h1>NIVEL 3</h1>
+				<p  key={task.id} style={this.stylesCompleted()}>
+					{task.title} -
+					{task.description} - 
+					{task.done} -
+					  {task.id}
 					<input type="checkbox"/>
 					<button style={button}>x</button>
 			  </p>
 			{/* //OTRA FORMA
-			// 	<li key={this.props.taskChildren.id}>
-			// 	    <p>{this.props.taskChildren.title}</p>
-			// 		<p>{this.props.taskChildren.description}</p>
-			// 		<p>{this.props.taskChildren.done}</p>
+			// 	<li key={this.props.task.id}>
+			// 	    <p>{this.props.task.title}</p>
+			// 		<p>{this.props.task.description}</p>
+			// 		<p>{this.props.task.done}</p>
 			// 		<input type="checkbox"/>
 			// 		<button>x</button>
 			//   </li> */}
@@ -41,7 +42,7 @@ class Task extends Component {
 	}
 }
 Task.propTypes={
-	taskChildren:PropTypes.object.isRequired
+	task:PropTypes.object.isRequired
 	
 }
 const button={

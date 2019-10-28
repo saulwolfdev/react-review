@@ -9,13 +9,13 @@ class Tasks extends Component {
 	render() {
 		return (
 			<div>
-				<h1>TASK FATHER</h1>
-					{this.props.taskGrandFather.map(task => <Task taskChildren={task} key={task.id}/>)}
+				<h1>NIVEL 2</h1>
+					{this.props.tasks.map(task => <Task task={task} key={task.id}/>)}
 			</div>
 		)
 	}
 }
 Tasks.propTypes={
-	taskGrandFather:PropTypes.array.isRequired
+	tasks:PropTypes.array.isRequired
 }
 export default Tasks;
