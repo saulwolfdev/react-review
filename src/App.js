@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import tasks from "./sample/tasks.json";
-import Tasks from './components/Tasks.js';
-import TaskForm from './components/TaskForm.js';
+import Tasks from './components/Tasks';
+import TaskForm from './components/TaskForm';
+import Post from './components/Post';
+import Navbar from './components/Navbar';
+import About from './components/About';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 class App extends Component {
 	constructor(props) {
 		super(props)
@@ -20,34 +25,43 @@ class App extends Component {
 		}
 		console.log(newTask)
 		this.setState({
-			tasks:[...this.state.tasks, newTask]
+			tasks: [...this.state.tasks, newTask]
 		})
 	}
-	deleteTask=(id)=>{
-		const newTasks=this.state.tasks.filter(task => task.id!==id)
+	deleteTask = (id) => {
+		const newTasks = this.state.tasks.filter(task => task.id !== id)
 		console.log(newTasks)
-		this.setState({tasks:newTasks})
+		this.setState({ tasks: newTasks })
 	}
-	checkDone=(id)=>{
-         const newTasks=this.state.tasks.map(task=>{
-			 if(task.id===id){
-				 task.done=!task.done
-			 }
-			 return task;
-		 })
-		 this.setState({tasks:newTasks})
+	checkDone = (id) => {
+		const newTasks = this.state.tasks.map(task => {
+			if (task.id === id) {
+				task.done = !task.done
+			}
+			return task;
+		})
+		this.setState({ tasks: newTasks })
 	}
 	render() {
 		return (
-			<div>
-				<h1>NIVEL 1</h1>
-				<TaskForm addTask={this.addTask} />
-				<Tasks 
-					tasks={this.state.tasks} 
-					deleteTask={this.deleteTask} 
-					checkDone={this.checkDone} 
-					/>
-			</div>
+      <Router>
+        <div>
+          <Navbar />
+          <Route exact path="/" render={props => (
+            <React.Fragment>
+              <TaskForm addTask={this.addTask} />
+              <Tasks
+                tasks={this.state.tasks}
+                checkDone={this.checkDone}
+                deleteTask={this.deleteTask}
+              />
+            </React.Fragment>
+          )}>
+          </Route>
+          <Route path="/About" component={About} />
+          <Route path="/Post" component={Post}/>
+        </div>
+      </Router>
 		);
 	}
 }
