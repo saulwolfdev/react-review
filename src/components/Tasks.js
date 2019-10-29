@@ -10,7 +10,13 @@ class Tasks extends Component {
 		return (
 			<div>
 				<h1>NIVEL 2</h1>
-					{this.props.tasks.map(task => <Task task={task} key={task.id}/>)}
+					{this.props.tasks.map(task => 
+						<Task 
+						task={task} 
+						key={task.id}
+						deleteTask={this.props.deleteTask}
+						checkDone={this.props.checkDone}
+						/>)}
 			</div>
 		)
 	}

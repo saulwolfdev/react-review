@@ -26,17 +26,12 @@ class Task extends Component {
 					{task.description} - 
 					{task.done} -
 					  {task.id}
-					<input type="checkbox"/>
-					<button style={button}>x</button>
+
+					<input  style={checkbox} type="checkbox"
+					onChange={this.props.checkDone.bind(this, task.id)}/>
+					<button style={button} 
+							onClick={this.props.deleteTask.bind(this, task.id)}>x</button>
 			  </p>
-			{/* //OTRA FORMA
-			// 	<li key={this.props.task.id}>
-			// 	    <p>{this.props.task.title}</p>
-			// 		<p>{this.props.task.description}</p>
-			// 		<p>{this.props.task.done}</p>
-			// 		<input type="checkbox"/>
-			// 		<button>x</button>
-			//   </li> */}
 			</div>
 		);
 	}
@@ -55,5 +50,9 @@ const button={
     padding: "12px",
     border: "none"
 	
+}
+const checkbox={
+	margin:" 0 20px",
+    cursor:" pointer"
 }
 export default Task;
