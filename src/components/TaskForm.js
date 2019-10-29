@@ -9,7 +9,6 @@ class TaskForm extends Component {
 	}
 	onSubmit=(e)=>{
 		e.preventDefault()
-		// console.log("Enviando de datos")
 		this.props.addTask(this.state.title,this.state.description)
 	}
 	onChange = (e) => this.setState({

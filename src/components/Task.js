@@ -22,9 +22,9 @@ class Task extends Component {
 			{/* DESTRUCTURING */}
 			  <h1>NIVEL 3</h1>
 				<p  key={task.id} style={this.stylesCompleted()}>
-					{task.title} -
-					{task.description} - 
-					{task.done} -
+					{task.title} ---
+					{task.description} ---
+					{task.done} ---
 					  {task.id}
 
 					<input  style={checkbox} type="checkbox"
