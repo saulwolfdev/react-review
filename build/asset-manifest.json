@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.3ba616d9.chunk.css",
-    "main.js": "/static/js/main.ccae83d0.chunk.js",
-    "main.js.map": "/static/js/main.ccae83d0.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.fcf4c153.js",
-    "runtime~main.js.map": "/static/js/runtime~main.fcf4c153.js.map",
-    "static/js/2.3bb0ec7a.chunk.js": "/static/js/2.3bb0ec7a.chunk.js",
-    "static/js/2.3bb0ec7a.chunk.js.map": "/static/js/2.3bb0ec7a.chunk.js.map",
-    "index.html": "index.html",
-    "precache-manifest.d94746178d1c5d2576153c8f923a54f8.js": "precache-manifest.d94746178d1c5d2576153c8f923a54f8.js",
-    "service-worker.js": "service-worker.js",
-    "static/css/main.3ba616d9.chunk.css.map": "/static/css/main.3ba616d9.chunk.css.map"
+    "main.css": "/saulwolfdev/react-review.git/static/css/main.3ba616d9.chunk.css",
+    "main.js": "/saulwolfdev/react-review.git/static/js/main.5f6c1e6b.chunk.js",
+    "main.js.map": "/saulwolfdev/react-review.git/static/js/main.5f6c1e6b.chunk.js.map",
+    "runtime~main.js": "/saulwolfdev/react-review.git/static/js/runtime~main.500f6d7d.js",
+    "runtime~main.js.map": "/saulwolfdev/react-review.git/static/js/runtime~main.500f6d7d.js.map",
+    "static/js/2.3bb0ec7a.chunk.js": "/saulwolfdev/react-review.git/static/js/2.3bb0ec7a.chunk.js",
+    "static/js/2.3bb0ec7a.chunk.js.map": "/saulwolfdev/react-review.git/static/js/2.3bb0ec7a.chunk.js.map",
+    "index.html": "/saulwolfdev/react-review.git/index.html",
+    "precache-manifest.d8230dc5aeb5e49880b47e21053cf42d.js": "/saulwolfdev/react-review.git/precache-manifest.d8230dc5aeb5e49880b47e21053cf42d.js",
+    "service-worker.js": "/saulwolfdev/react-review.git/service-worker.js",
+    "static/css/main.3ba616d9.chunk.css.map": "/saulwolfdev/react-review.git/static/css/main.3ba616d9.chunk.css.map"
   }
 }
