@@ -5,8 +5,8 @@ import TaskForm from './components/TaskForm';
 import Post from './components/Post';
 import Navbar from './components/Navbar';
 import About from './components/About';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
+// import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 class App extends Component {
 	constructor(props) {
 		super(props)
@@ -44,24 +44,24 @@ class App extends Component {
 	}
 	render() {
 		return (
-      <Router>
-        <div>
-          <Navbar />
-          <Route exact path="/" render={props => (
-            <React.Fragment>
-              <TaskForm addTask={this.addTask} />
-              <Tasks
-                tasks={this.state.tasks}
-                checkDone={this.checkDone}
-                deleteTask={this.deleteTask}
-              />
-            </React.Fragment>
-          )}>
-          </Route>
-          <Route path="/About" component={About} />
-          <Route path="/Post" component={Post}/>
-        </div>
-      </Router>
+			<BrowserRouter>
+				<div>
+				<Navbar />
+				<Route exact path="/" render={props => (
+					<React.Fragment>
+					<TaskForm addTask={this.addTask} />
+					<Tasks
+						tasks={this.state.tasks}
+						checkDone={this.checkDone}
+						deleteTask={this.deleteTask}
+					/>
+					</React.Fragment>
+				)}>
+				</Route>
+				<Route path="/About" component={About} />
+				<Route path="/Post" component={Post}/>
+				</div>
+			</BrowserRouter>
 		);
 	}
 }
